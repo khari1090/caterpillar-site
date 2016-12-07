@@ -1,0 +1,46 @@
+
+$blue: #368BFF;
+$lightblue: #36C1FF;
+$paleblue: #EAF8FF;
+$white: #ffffff;
+
+$button_color: $blue;
+
+//font weights
+$bold: 900;
+
+body{
+  font-size: 16px;
+}
+
+h1{
+  font-family: "Open Sans", sans-serif;
+  font-size: 3em;
+  font-weight: $bold;
+  color: $blue;
+}
+
+h2{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+p{
+  font-family: "Quicksand";
+  font-size: 1em;
+}
+
+#blue{
+  background-color: $blue;
+}
+
+button{
+  background-color: $button_color;
+  color: $white;
+  border-style: none;
+  font-size: 1em;
+  border-radius: 50px;
+  padding: 1em;
+  width: 200px;
+}
