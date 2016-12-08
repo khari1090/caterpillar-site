@@ -1,29 +1,112 @@
 <!DOCTYPE html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="style.scss">
-<!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet"> -->
-<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/skeleton.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
+  <script type="text/javascript" src="main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 </head>
 
 <body>
-  <nav></nav>
 
-  <div class="flex-100" id="blue">
-    <div class="col">
-      <h1>Master any language with any movie</h1>
-      <h2>Optimized language learning while watching your favorite videos and movies</h2>
-      <button>How It Works</button>
-      <button>Try It</button>
+<div class="nav">
+  <a href="#" class="logo">Caterpillar</a>
+  <!-- <a href="#" class="download">Download the App</a> -->
+</div>
+
+<div class="hero" id="blue-bg">
+
+  <div class="container">
+
+    <div>
+      <h1 id="white-text">Master any language with any movie</h1>
+      <h2 id="white-text">Optimized language learning while watching your favorite videos and movies</h2>
+      <div>
+        <a href="#how-it-works"><button>How It Works</button></a>
+        <a href="#app-section"><button>Try It</button></a>
+      </div>
+    </div>
+
+    <div class="column">
+      <img id="logo" src="img/logo-small.svg">
+    </div>
+
+  </div>
+</div>
+
+<div class="app-section" id="app-section">
+  <h1>Try the app!</h1>
+<div id="app"></div>
+</div>
+
+
+<div class="section" id="how-it-works">
+  <div class="container">
+    <div class="column">
+      <h1>How it works</h1>
+      <div class="how-to-row">
+        <h1 id="big-number">1</h1>
+        <p>Choose your own video and subtitle files.</p>
+      </div>
+
+      <div class="how-to-row">
+        <h1 id="big-number">2</h1>
+        <p>Caterpillar will automatically generate your subtitle-based language curriculum.</p>
+      </div>
+
+      <div class="how-to-row">
+        <h1 id="big-number">3</h1>
+        <p>Practice your skills with listening, writing, and speaking exercises.</p>
+      </div>
+
+      <a href="#" class="blue-link">Find out more ➜</a>
+    </div>
+    <div class="column">
+      <img src="img/macbook.svg">
+    </div>
+  </div>
+</div>
+
+
+<div class="section" id="paleblue-bg">
+  <div class="container">
+    <div class="column">
+      <img src="img/dailygoal.svg">
+    </div>
+
+    <div class="column">
+      <h1>Reach your daily goal</h1>
+      <p>Consistency is key. Choose a daily goal and discipline yourself.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="section" id="white-bg">
+  <div class="container">
+    <div class="column">
+      <h1>Celebrate</h1>
+      <p>It is insanely rewarding to watch an entire foreign movie and
+        understand every word without the need for subtitles.
+        Caterpillar can make this a reality.</p>
+      </div>
+
+      <div class="column">
+        <img src="img/friends.svg">
+      </div>
     </div>
   </div>
 
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <footer></footer>
+  <div class="email" id="lightblue-bg">
+    <img src="img/email.svg" style="width:50%;">
+  </div>
+
+  <footer class="footer" id="paleblue-bg">
+
+  </footer>
+
 </body>
 
 </html>

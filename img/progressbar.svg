@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="688px" height="83px" viewBox="0 0 688 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 36</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(0.000000, -3279.000000)">
+            <g id="Group-36" transform="translate(-158.000000, 3272.000000)">
+                <g id="Group-18" filter="url(#filter-1)" transform="translate(0.000000, 22.500000)">
+                    <g id="Group-17">
+                        <rect id="Rectangle-32" fill="#FAFAFA" x="0" y="0" width="655.375358" height="57.5" rx="28.75"></rect>
+                        <rect id="Rectangle-32-Copy" fill="#36C1FF" x="0" y="0" width="473.262206" height="57.5" rx="28.75"></rect>
+                    </g>
+                </g>
+                <g id="Group-25" transform="translate(682.891117, 0.000000)" font-family="Quicksand-Bold, Quicksand" font-weight="bold">
+                    <text id="78%" font-size="60" fill="#3E474F">
+                        <tspan x="25.0143266" y="87">78</tspan>
+                        <tspan x="97.4343266" y="87" font-family="LucidaGrande-Bold, Lucida Grande">%</tspan>
+                    </text>
+                    <text id="Daily-Goal" font-size="32.5" fill="#31393F">
+                        <tspan x="0" y="31">Daily Goal</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
