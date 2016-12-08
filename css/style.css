@@ -259,6 +259,12 @@ button:hover{
   background-color: var(--paleblue);
 }
 
+@media (max-width: 800px) {
+  #macbook{
+    display: none;
+  }
+}
+
 #app{
   width: 80%;
   background-color: var(--white);
