@@ -1,23 +1,129 @@
 <!DOCTYPE html>
 
 <head>
+  <script type="text/javascript" src="js/main.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/skeleton.css"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,800i,900" rel="stylesheet">
-
 </head>
 
 <body>
 
   <div class="wrapper">
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div id="modal-1">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1><u>Lifetime</u> Access $99</h1>
+            <p>One-time only and all the updates come free!</p>
+
+          </div>
+
+          <div class="modal-body">
+            <div>
+              <input id="modal-email" placeholder="Enter your email">
+              <button id="submit-email" onclick="submitEmail()">Submit</button>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <a href=""><h4>Why isn't Caterpillar free?</h4></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment method content -->
+      <div id="modal-2">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Choose a payment method</h3>
+
+          </div>
+
+          <div class="modal-body">
+            <a href="https://www.paypal.com/"><img src="img/paypal-button.png" alt="Buy now with PayPal" /></a>
+            <a href="#" id="cc-button" onclick="creditCard()"><img src="img/cc-button.svg" alt="Pay with Credit Card"/></a>
+          </div>
+
+          <div class="modal-footer">
+            <a href=""><h4>Why isn't Caterpillar free?</h4></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credit Card content -->
+      <div id="modal-3">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Credit Card Payment</h3>
+          </div>
+
+          <div class="container" id="payment-container">
+
+            <form id="payment-form" role="form">
+              <input type="text" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
+              <input type="text" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+
+              <div class="form-group">
+                <select name="expiry-month" id="expiry-month">
+                  <option>Month</option>
+                  <option value="01">Jan (01)</option>
+                  <option value="02">Feb (02)</option>
+                  <option value="03">Mar (03)</option>
+                  <option value="04">Apr (04)</option>
+                  <option value="05">May (05)</option>
+                  <option value="06">June (06)</option>
+                  <option value="07">July (07)</option>
+                  <option value="08">Aug (08)</option>
+                  <option value="09">Sep (09)</option>
+                  <option value="10">Oct (10)</option>
+                  <option value="11">Nov (11)</option>
+                  <option value="12">Dec (12)</option>
+                </select>
+                <select name="expiry-year">
+                  <option value="13">2013</option>
+                  <option value="14">2014</option>
+                  <option value="15">2015</option>
+                  <option value="16">2016</option>
+                  <option value="17">2017</option>
+                  <option value="18">2018</option>
+                  <option value="19">2019</option>
+                  <option value="20">2020</option>
+                  <option value="21">2021</option>
+                  <option value="22">2022</option>
+                  <option value="23">2023</option>
+                </select>
+                <input type="text" name="cvv" id="cvv" placeholder="CCV">
+              </div>
+
+              <button type="button" id="pay-now-button">Pay Now</button>
+
+            </div>
+
+          <div class="modal-footer">
+            <a href=""><h4>Why isn't Caterpillar free?</h4></a>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
     <div class="nav">
       <a href="#" class="logo">Caterpillar</a>
-      <a href="#" class="download">Download the App</a>
+      <button id="myBtn" class="download-button" onclick="openModal()">Download the App</button>
     </div>
 
     <div class="hero">
@@ -48,8 +154,8 @@
       </div><br><br><br>
 
       <div>
-        <a href="#how-it-works"><button>Download for Mac</button></a>
-        <a href="#app-section"><button>Download for PC</button></a>
+        <a><button>Download for Mac</button></a>
+        <a><button>Download for PC</button></a>
       </div>
 
     </div>
@@ -112,13 +218,16 @@
         </div>
       </div>
 
-      <div class="email" id="lightblue-bg">
-        <img src="img/email.svg" style="width:50%;">
+      <div class="email-section">
+        <h1>Want updates and free language learning hacks?</h1>
+        <div>
+          <input id="modal-email" placeholder="Enter your email">
+          <button id="submit-email" onclick="submitEmail()">Submit</button>
+        </div>
       </div>
 
       <footer class="footer" id="paleblue-bg"></footer>
 
     </div>
   </body>
-
   </html>

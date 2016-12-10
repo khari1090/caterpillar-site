@@ -1,7 +1,11 @@
+/*__________Global Variables__________*/
+
 :root {
   --blue: #368BFF;
   --lightblue: #36C1FF;
   --lightblue-hover: #63CFFF;
+  --green: #47e06d;
+  --purple: #9D86D5;
   --paleblue: #f4f8ff;
   --white: #ffffff;
   --black: #20292C;
@@ -17,16 +21,8 @@
 
 }
 
-/*@media only screen and (max-width: 1300px){
 
-  .container{
-    flex-direction: column;
-    width: 100%;
-  }
-
-}*/
-
-/*Main Page*/
+/*__________Main Page__________*/
 
 body{
   font-size: 16px;
@@ -67,6 +63,14 @@ h2{
   font-size: 1.5em;
 }
 
+h3{
+  font-size: 1.9em;
+}
+
+h4{
+  font-size: 1.2em;
+}
+
 p{
   font-family: "Quicksand", sans-serif;
   font-size: 1.5em;
@@ -83,19 +87,27 @@ button{
   border-radius: 50px;
   padding: .5em;
   min-width: 250px;
-  /*box-shadow: 0px 0px 0px 4px #1D7DFF;*/
   margin: .5em;
   cursor: pointer;
-  float: left;
+  transition: .2s ease;
 }
 
 button:hover{
   background-color: var(--lightblue-hover);
 }
 
+button:active{
+  background-color: var(--lightblue);
+}
+
+button:focus{
+  outline: none;
+}
+
 @media (max-width: 800px) {
   button{
-    width: 100%;
+    max-width: 60px;
+    width: 50%;
   }
 }
 
@@ -103,7 +115,7 @@ button:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2%;
+  padding: 1%;
   margin: 0 auto;
   background-color: #1D7DFF;
 }
@@ -115,18 +127,27 @@ button:hover{
   font-family: var(--quicksand);
 }
 
-.nav .download{
+.download-button{
   text-decoration: none;
   font-size: 1.3em;
-  color: white;
-  font-family: var(--quicksand);
-  padding: 1%;
-  border-radius: 30px;
-  border: 2px solid var(--white);
+  color: var(--white);
+  font-family: var(--nunito);
+  font-weight: 700;
+  /*padding: 1%;*/
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: var(--green);
 }
 
-.nav .download:hover{
-  background-color: rgba(255, 255, 255, 0.1);
+.download-button:hover{
+  background-color: #66e586;
+}
+
+@media (max-width: 500px) {
+  .download-button{
+    width: 40%;
+    min-width: 180px;
+  }
 }
 
 .hero{
@@ -194,7 +215,6 @@ button:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*border: 1px solid black;*/
   padding: 2%;
 }
 
@@ -246,15 +266,40 @@ button:hover{
   padding-left: 10px;
 }
 
-.email{
-  height: 500px;
-  display: flex;
+.email-section{
+  padding: 6%;
+  display: flex;email-b
   align-items: center;
-  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.email-section button{
+  border-radius: 4px;
+  position: relative;
+  height: 100%;
+  margin: 0;
+  width: 200px;
+  min-width: 100px;
+  background-color: var(--black);
+}
+
+@media (max-width: 800px) {
+  .email-section button{
+    min-width: 80%;
+    height: 50px;
+  }
+
+  .email-section input{
+    width: 80%;
+    height: 50px;
+  }
 }
 
 .footer{
-  height: 200px;
+  height: 150px;
 }
 
 #graphic{
@@ -300,6 +345,8 @@ button:hover{
 
 
 
+/*__________App Container__________*/
+
 .app-container{
   width: 80%;
   background-color: var(--white);
@@ -316,4 +363,180 @@ button:hover{
 width: 100%;
 height: 100%;
 margin: 0 auto;
+}
+
+
+
+/*__________Modal__________*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 5px;
+    max-width: 600px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: var(--lightblue);
+    font-family: var(--opensans);
+    text-align: center;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.modal-body {
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.modal-body input, .email-section input{
+  font-size: 1.5em;
+  font-family: var(--opensans);
+  font-weight: 700;
+  style: none;
+  padding: 0;
+  padding-left: 5px;
+  min-width: 100px;
+}
+
+.modal-body div, .email-section div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal-body button{
+  border-radius: 4px;
+  position: relative;
+  /*width: auto;*/
+  height: 100%;
+  margin: 0;
+  min-width: 180px;
+}
+
+.modal-header p{
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: var(--paleblue);
+    color: #d3d3d3;
+    font-family: var(--quicksand);
+    font-weight: var(--light);
+    font-size: .8em;
+    text-align: center;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+
+/*__________Payment form__________*/
+
+#payment-form{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+#payment-form input{
+  font-size: 1.2em;
+  font-family: var(--opensans);
+  font-weight: 400;
+  style: none;
+  padding: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding-left: 5px;
+  min-width: 50px;
+}
+
+#payment-form select{
+  height: 2.5em;
+  background-color: white;
+  border: 1px solid #cccccc;
+  font-size: 1.2em;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .form-group{
+    flex-wrap: wrap;
+  }
+}
+
+#pay-now-button{
+  background-color: var(--green);
+  border-radius: 4px;
+  width: 100%;
+  min-width: 100px;
+  margin: 0 auto;
+}
+
+#payment-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
