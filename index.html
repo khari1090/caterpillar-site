@@ -10,8 +10,15 @@
 
 <body>
 
+  <div class="wrapper">
+
+  <div class="nav">
+    <a href="#" class="logo">Caterpillar</a>
+    <button onclick="openModal()" id="myBtn" class="inverted">Download the App</button>
+  </div>
+<div class="wrapper">
   <!-- The Modal -->
-  <div id="myModal" class="modal">
+  <div id="myModal">
 
     <!-- Modal content -->
     <div id="modal-1">
@@ -68,11 +75,11 @@
         <div class="container" id="payment-container">
 
           <form id="payment-form" role="form">
-            <input type="text" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
-            <input type="text" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+            <input type="text" placeholder="Card Holder's Name">
+            <input type="text" placeholder="Debit/Credit Card Number">
 
             <div class="form-group">
-              <select name="expiry-month" id="expiry-month">
+              <select>
                 <option>Month</option>
                 <option value="01">Jan (01)</option>
                 <option value="02">Feb (02)</option>
@@ -87,7 +94,7 @@
                 <option value="11">Nov (11)</option>
                 <option value="12">Dec (12)</option>
               </select>
-              <select name="expiry-year">
+              <select>
                 <option value="13">2013</option>
                 <option value="14">2014</option>
                 <option value="15">2015</option>
@@ -100,7 +107,7 @@
                 <option value="22">2022</option>
                 <option value="23">2023</option>
               </select>
-              <input type="text" name="cvv" id="cvv" placeholder="CCV">
+              <input type="text" placeholder="CCV">
             </div>
 
             <button type="button" id="pay-now-button">Pay Now</button>
@@ -116,13 +123,6 @@
 
   </div>
 
-    <div class="wrapper">
-
-    <div class="nav">
-      <a href="#" class="logo">Caterpillar</a>
-      <button onclick="openModal()" id="myBtn" class="inverted">Download the App</button>
-    </div>
-
     <div class="hero">
 
       <div class="container">
@@ -131,8 +131,8 @@
           <h1 id="white-text">Master any language with any movie</h1>
           <h2 id="white-text">Optimized language learning while watching your favorite videos and movies</h2>
           <div>
-            <a href="#how-it-works"><button>How It Works</button></a>
-            <a href="#app-section"><button>Try It</button></a>
+            <a class="button" href="#how-it-works">How It Works</a>
+            <a class="button" href="#app-section">Try It</a>
           </div>
         </div>
 
@@ -151,8 +151,8 @@
       </div><br><br><br>
 
       <div>
-        <a><button>Download for Mac</button></a>
-        <a><button>Download for PC</button></a>
+        <a class="button" onclick="openModal()">Download for Mac</a>
+        <a class="button" onclick="openModal()">Download for PC</a>
       </div>
 
     </div>
