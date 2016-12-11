@@ -17,8 +17,6 @@
   --opensans: 'Open Sans';
   --quicksand: 'Quicksand';
   --nunito: 'Nunito Sans';
-  --muli: 'Muli';
-
 }
 
 
@@ -223,13 +221,12 @@ button:focus{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*border: 1px solid black;*/
   padding: 2%;
 }
 
 .column-centered img{
-  width: 95%;
-  max-width: 400px;
+    width: 95%;
+    max-width: 400px;
 }
 
 @media (max-width: 1000px) {
@@ -383,7 +380,7 @@ button:focus{
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 9999; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -475,7 +472,6 @@ button:focus{
 .modal-body button{
   border-radius: 4px;
   position: relative;
-  /*width: auto;*/
   height: 100%;
   margin: 0;
   min-width: 180px;
@@ -487,14 +483,14 @@ button:focus{
 }
 
 .modal-footer {
-  padding: 2px 16px;
-  background-color: var(--paleblue);
-  color: #d3d3d3;
-  font-family: var(--quicksand);
-  font-weight: var(--light);
-  font-size: .8em;
-  text-align: center;
-  border-radius: 0px 0px 5px 5px;
+    padding: 2px 16px;
+    background-color: var(--paleblue);
+    color: #d3d3d3;
+    font-family: var(--quicksand);
+    font-weight: var(--light);
+    font-size: .8em;
+    text-align: center;
+    border-radius: 0px 0px 5px 5px;
 }
 
 
