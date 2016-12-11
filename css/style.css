@@ -29,13 +29,15 @@ body{
   color: var(--black);
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
+  @-ms-viewport { width: 1000px; }
   body{
     font-size: 14px;
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  @-ms-viewport { width: 600px; }
   body{
     font-size: 12px;
   }
@@ -110,9 +112,10 @@ button:focus, .button:focus{
   outline: none;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  @-ms-viewport { width: 800px; }
   button{
-    max-width: 60px;
+    min-width: 60px;
     width: 50%;
   }
 }
@@ -128,7 +131,7 @@ button:focus, .button:focus{
   background-color: #1D7DFF;
 }
 
-.nav .logo{
+.nav .title{
   text-decoration: none;
   font-size: 2em;
   color: white;
@@ -154,7 +157,8 @@ button:focus, .button:focus{
   color: var(--blue);
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  @-ms-viewport { width: 500px; }
   .inverted{
     width: 40%;
     min-width: 180px;
@@ -167,8 +171,8 @@ button:focus, .button:focus{
   justify-content: center;
   padding: 10%;
   background-color: var(--blue);
-  /*background-image: url("http://i.giphy.com/xTiTnvNBcj0lN3D5II.gif");*/
-  /*background-size: cover;*/
+  /*background-image: url("http://i.giphy.com/xTiTnvNBcj0lN3D5II.gif");
+  background-size: cover;*/
 }
 
 .section{
@@ -178,7 +182,8 @@ button:focus, .button:focus{
   padding: 10%;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
+  @-ms-viewport { width: 1000px; }
   .section{
     padding: none;
   }
@@ -191,7 +196,8 @@ button:focus, .button:focus{
   justify-content: center;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
+  @-ms-viewport { width: 1000px; }
   .container{
     flex-direction: column;
     margin: 0;
@@ -216,7 +222,7 @@ button:focus, .button:focus{
 @media (max-width: 1000px) {
   .column{
     width: 80%;
-    padding: 0;
+    padding: 10%;
   }
 }
 
@@ -235,14 +241,14 @@ button:focus, .button:focus{
     max-width: 400px;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .column-centered{
     width: 95%;
     padding: 0;
   }
 
   .column-centered img{
-    width: 95%;
+    width: 55%;
   }
 }
 
@@ -284,7 +290,7 @@ button:focus, .button:focus{
   padding-bottom: 1%;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .email-section button{
     min-width: 80%;
     height: 50px;
@@ -296,8 +302,22 @@ button:focus, .button:focus{
   }
 }
 
-.footer{
-  height: 150px;
+.footer {
+  height: 50px;
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--opensans);
+  font-weight: bold;
+  color: var(--black);
+  background-color: var(--paleblue);
+}
+
+.footer a{
+  text-decoration: none;
+  color: var(--blue);
 }
 
 #graphic{
@@ -335,7 +355,7 @@ button:focus, .button:focus{
   background-color: var(--paleblue);
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   #macbook{
     display: none;
   }
@@ -355,7 +375,7 @@ button:focus, .button:focus{
   background-color: var(--paleblue);
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   #app-section{
     display: none;
   }
@@ -541,7 +561,7 @@ button:focus, .button:focus{
   align-items: center;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .form-group{
     flex-wrap: wrap;
   }
