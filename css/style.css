@@ -5,6 +5,7 @@
   --lightblue: #36C1FF;
   --lightblue-hover: #63CFFF;
   --green: #47e06d;
+  --darkgreen: #24C14B;
   --purple: #9D86D5;
   --paleblue: #f4f8ff;
   --white: #ffffff;
@@ -177,15 +178,30 @@ button:focus, .button:focus{
 
 .section{
   min-height: 40vh;
-  display: flex;
-  justify-content: center;
   padding: 10%;
 }
+
+.cta-section{
+  padding-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @media screen and (max-width: 1000px) {
   @-ms-viewport { width: 1000px; }
   .section{
-    padding: none;
+    padding-top: 15%;
+  }
+
+  #green-bg{
+    padding-top: 0;
+  }
+
+  #paleblue-bg{
+    padding-bottom: 0;
   }
 }
 
@@ -213,6 +229,7 @@ button:focus, .button:focus{
 .column{
   width: 50%;
   height: 100%;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,6 +256,7 @@ button:focus, .button:focus{
 .column-centered img{
     width: 95%;
     max-width: 400px;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 1000px) {
@@ -268,7 +286,7 @@ button:focus, .button:focus{
 
 .email-section{
   padding: 5%;
-  display: flex;email-b
+  display: flex;
   align-items: center;
   text-align: center;
   flex-direction: column;
@@ -355,6 +373,10 @@ button:focus, .button:focus{
   background-color: var(--paleblue);
 }
 
+#macbook{
+  margin: 0 auto;
+  padding: 0;
+}
 @media screen and (max-width: 800px) {
   #macbook{
     display: none;
@@ -529,6 +551,7 @@ button:focus, .button:focus{
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
+  padding: 5%;
 }
 
 #payment-form input{
@@ -536,7 +559,7 @@ button:focus, .button:focus{
   font-family: var(--opensans);
   font-weight: 400;
   style: none;
-  padding: 3%;
+  padding: 2.5%;
   margin-top: 1%;
   margin-bottom: 1%;
   padding-left: 5px;
@@ -548,7 +571,7 @@ button:focus, .button:focus{
 }
 
 #payment-form select{
-  height: 2.5em;
+  height: 2.45em;
   background-color: white;
   border: 1px solid #cccccc;
   font-size: 1.2em;
@@ -573,6 +596,7 @@ button:focus, .button:focus{
   width: 100%;
   min-width: 100px;
   margin: 0 auto;
+  margin-top: 2%;
 }
 
 #payment-container{
@@ -581,3 +605,6 @@ button:focus, .button:focus{
   justify-content: center;
   flex-direction: column;
 }
+
+
+/*__________Stripe form__________*/

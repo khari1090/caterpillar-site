@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1391px" height="1347px" viewBox="0 0 1391 1347" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1391px" height="1388px" viewBox="0 0 1391 1388" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
     <title>mountain</title>
     <desc>Created with Sketch.</desc>
@@ -9,7 +9,7 @@
             <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0.521568627   0 0 0 0 0.521568627   0 0 0 0 0.521568627  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
         </filter>
-        <polygon id="path-3" points="477.75 80 609 231.2 561.941176 248 514.882353 220 467.823529 242.4 409 231.2"></polygon>
+        <polygon id="path-3" points="477.75 79 609 230.2 561.941176 247 514.882353 219 467.823529 241.4 409 230.2"></polygon>
         <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
             <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0.850980392   0 0 0 0 0.890196078   0 0 0 0 0.905882353  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
@@ -41,20 +41,20 @@
             <stop stop-color="#59C2F1" offset="0%"></stop>
             <stop stop-color="#7BD2F9" offset="100%"></stop>
         </linearGradient>
-        <polygon id="path-14" points="806.5 744 985 960 921 984 857 944 793 976 713 960"></polygon>
+        <polygon id="path-14" points="806.59375 744 991 960 924.882353 984 858.764706 944 792.647059 976 710 960"></polygon>
         <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-15">
             <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0.521568627   0 0 0 0 0.521568627   0 0 0 0 0.521568627  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
         </filter>
-        <polygon id="path-16" points="805.75 744 937 895.2 889.941176 912 842.882353 884 795.823529 906.4 737 895.2"></polygon>
+        <polygon id="path-16" points="806.4375 744 939 895.2 891.470588 912 843.941176 884 796.411765 906.4 737 895.2"></polygon>
         <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-17">
             <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feColorMatrix values="0 0 0 0 0.850980392   0 0 0 0 0.890196078   0 0 0 0 0.905882353  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
         </filter>
         <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-18">
-            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.532658376   0 0 0 0 0.532658376   0 0 0 0 0.532658376  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
             <feMerge>
                 <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
                 <feMergeNode in="SourceGraphic"></feMergeNode>
@@ -63,12 +63,12 @@
         <path d="M0,3.47551796 C0,2.37160098 0.900345519,1.43940121 2.00746124,1.39353718 L32.9925388,0.109931095 C34.101229,0.0640018401 35,0.92239901 35,2.02771975 L35,19.5013859 C35,29.1656036 27.1671082,37 17.5,37 L17.5,37 C7.83501688,37 0,29.1602845 0,19.4985219 L0,3.47551796 Z" id="path-19"></path>
     </defs>
     <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="mountain" transform="translate(0.000000, 1.000000)">
+        <g id="mountain" transform="translate(0.000000, 7.000000)">
             <g id="Group-23" transform="translate(0.000000, 130.000000)">
-                <polygon id="Path-10-Copy" fill="#DB5263" points="497 8 577 8 577 35.4285714 577 72 497 72"></polygon>
+                <polygon id="Path-10-Copy" fill="#DB5263" points="497 8 585 8 570 40 585 72 497 72"></polygon>
                 <g id="Group-22-Copy-2" transform="translate(0.000000, 88.000000)">
-                    <polygon id="Path-7" fill="#D1DCE0" points="0 1104 480 1104 480 0"></polygon>
-                    <polygon id="Path-7-Copy" fill="#C5CCD0" transform="translate(935.000000, 552.000000) scale(-1, 1) translate(-935.000000, -552.000000) " points="479 1104 1391 1104 1391 0"></polygon>
+                    <polygon id="Path-7" fill="#D1DCE0" points="0 1104 480 1131 480 0"></polygon>
+                    <polygon id="Path-7-Copy" fill="#C5CCD0" transform="translate(935.000000, 565.500000) scale(-1, 1) translate(-935.000000, -565.500000) " points="479 1104 1391 1131 1391 0"></polygon>
                 </g>
                 <g id="Path-11">
                     <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
@@ -83,8 +83,8 @@
                 <polygon id="Path-10" fill="#FF566B" points="473 0 545 0 545 27.4285714 545 64 473 64"></polygon>
                 <polygon id="Path-12" fill="#632E2E" points="497 72 545 64 497 64"></polygon>
                 <g id="Group-22-Copy" transform="translate(601.000000, 744.000000)">
-                    <polygon id="Path-7" fill="#E3ECF0" points="0 472 208 472 208 0"></polygon>
-                    <polygon id="Path-7-Copy" fill="#D9E3E8" transform="translate(400.000000, 236.000000) scale(-1, 1) translate(-400.000000, -236.000000) " points="208 472 592 472 592 0"></polygon>
+                    <polygon id="Path-7" fill="#E3ECF0" points="0 472 208 507 208 0"></polygon>
+                    <polygon id="Path-7-Copy" fill="#D9E3E8" transform="translate(400.000000, 253.500000) scale(-1, 1) translate(-400.000000, -253.500000) " points="208 472 592 507 592 0"></polygon>
                 </g>
                 <polygon id="Path-14" fill="#858585" points="616.058824 473.230769 643.588235 559.384615 680.294118 537.846154 726.176471 580.923077 790.411765 591.692308 817.941176 624 836.294118 591.692308 873 591.692308 845.470588 570.153846 845.470588 527.076923 817.941176 494.769231 717 430.153846 717 400 625.235294 344 597.705882 365.538462 561 365.538462 570.176471 397.846154 597.705882 408.615385 588.529412 430.153846"></polygon>
                 <g id="favicon-copy" transform="translate(766.019336, 429.019336) rotate(-325.000000) translate(-766.019336, -429.019336) translate(638.019336, 301.019336)">
@@ -153,7 +153,7 @@
                     <use fill="black" fill-opacity="1" filter="url(#filter-17)" xlink:href="#path-16"></use>
                     <use fill="#F6FCFF" fill-rule="evenodd" xlink:href="#path-16"></use>
                 </g>
-                <g id="Group-22" transform="translate(193.000000, 992.000000)">
+                <g id="Group-22" transform="translate(193.000000, 1012.000000)">
                     <path d="M52,72 L52,200" id="Path-13-Copy" stroke="#8B572A" stroke-width="8"></path>
                     <polygon id="Path-7" fill="#7DBF34" points="0 128 56 128 56 0"></polygon>
                     <polygon id="Path-7" fill="#7ED321" transform="translate(84.000000, 64.000000) scale(-1, 1) translate(-84.000000, -64.000000) " points="56 128 112 128 112 0"></polygon>
