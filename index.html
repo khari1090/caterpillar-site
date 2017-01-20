@@ -2,9 +2,12 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
   <script src="js/main.js" type="text/javascript"></script>
-  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-  <script type="text/javascript">Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');</script>
+  <!-- <script type="text/javascript" src="https://js.stripe.com/v2/"></script> -->
+  <!-- <script type="text/javascript">Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');</script> -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,800i,900" rel="stylesheet">
@@ -12,119 +15,103 @@
 
 <body>
 
+  <!-- <h1 id="bigOne"></h1> -->
+
   <div class="wrapper">
 
-  <div class="nav">
-    <a href="#" class="title">Caterpillar</a>
-    <button onclick="openModal()" id="myBtn" class="inverted">Download the App</button>
-  </div>
-<div class="wrapper">
-  <!-- The Modal -->
-  <div id="myModal">
+    <div class="nav">
+      <a href="#" class="title">Caterpillar</a>
+      <button onclick="openModal()" id="myBtn" class="inverted">Download the App</button>
+    </div>
 
-    <!-- Modal content -->
-    <div id="modal-1">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <h1><u>Lifetime</u> Access $99</h1>
-          <p>One-time only and all the updates come free!</p>
+    <!-- The Modal -->
+    <div id="myModal">
 
-        </div>
+      <!-- Modal content -->
+      <div id="modal-1">
+        <div class="modal-content">
 
-        <div class="modal-body">
-          <div>
-            <input id="modal-email" placeholder="Enter your email">
-            <button id="submit-email" onclick="submitEmail()">Submit</button>
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1><u>Lifetime</u> Access $99</h1>
+            <p>One-time only and all the updates come free!</p>
           </div>
 
-        </div>
-        <div class="modal-footer">
-          <a href=""><h4>Why isn't Caterpillar free?</h4></a>
-        </div>
-      </div>
-    </div>
+          <div class="modal-body">
 
-    <!-- Payment method content -->
-    <div id="modal-2">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <h3>Choose a payment method</h3>
+            <div class="container">
+              <form id="signup-form" role="form">
+                <input id="txtEmail" type="email" placeholder="Email">
+                <input id="txtPassword" type="password" placeholder="Password"><br>
+                <p id="errorMessage"></p>
+                <button type="button" id="btnSignUp">Sign Up</button>
+              </form>
 
-        </div>
-
-        <div class="modal-body">
-          <a href="https://www.paypal.com/"><img src="img/paypal-button.svg" alt="Buy now with PayPal" /></a>
-          <a href="#" id="cc-button" onclick="creditCard()"><img src="img/cc-button.svg" alt="Pay with Credit Card"/></a>
-        </div>
-
-        <div class="modal-footer">
-          <a href=""><h4>Why isn't Caterpillar free?</h4></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Credit Card content -->
-    <div id="modal-3">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <span class="close" onclick="closeModal();">&times;</span>
-          <h3>Credit Card Payment</h3>
-        </div>
-
-        <div class="container" id="payment-container">
-
-          <form id="payment-form" role="form">
-            <input type="text" placeholder="Card Holder's Name">
-            <input type="text" placeholder="Debit/Credit Card Number">
-
-            <div class="form-group">
-              <select>
-                <option>Month</option>
-                <option value="01">Jan (01)</option>
-                <option value="02">Feb (02)</option>
-                <option value="03">Mar (03)</option>
-                <option value="04">Apr (04)</option>
-                <option value="05">May (05)</option>
-                <option value="06">June (06)</option>
-                <option value="07">July (07)</option>
-                <option value="08">Aug (08)</option>
-                <option value="09">Sep (09)</option>
-                <option value="10">Oct (10)</option>
-                <option value="11">Nov (11)</option>
-                <option value="12">Dec (12)</option>
-              </select>
-              <select>
-                <option>Exp Year</option>
-                <option value="13">2013</option>
-                <option value="14">2014</option>
-                <option value="15">2015</option>
-                <option value="16">2016</option>
-                <option value="17">2017</option>
-                <option value="18">2018</option>
-                <option value="19">2019</option>
-                <option value="20">2020</option>
-                <option value="21">2021</option>
-                <option value="22">2022</option>
-                <option value="23">2023</option>
-              </select>
-              <input type="text" placeholder="CCV">
             </div>
 
-            <button type="button" id="pay-now-button">Pay Now</button>
+          </div>
+          <div class="modal-footer">
+            <a href=""><h4>Why isn't Caterpillar free?</h4></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment method content -->
+      <div id="modal-2">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Choose a payment method</h3>
 
           </div>
 
-        <div class="modal-footer">
-          <a href=""><h4>Why isn't Caterpillar free?</h4></a>
+          <div class="modal-body">
+            <a href="https://www.paypal.com/"><img style="width: 90%; max-width: 250px" src="img/paypal-button.svg" alt="Buy now with PayPal"/></a>
+            <a href="#" id="cc-button" onclick="creditCard()"><img style="width: 90%; max-width: 250px" src="img/cc-button.svg" alt="Pay with Credit Card"/></a>
+          </div>
+
+          <div class="modal-footer">
+            <a href=""><h4>Why isn't Caterpillar free?</h4></a>
+          </div>
         </div>
-
       </div>
-    </div>
 
-  </div>
+      <!-- Credit Card content -->
+      <div id="modal-3">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Credit Card Payment</h3>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="container">
+              <form id="signup-form" role="form">
+                <input type="text" placeholder="Card Holder's Name">
+                <input type="text" placeholder="Card Number">
+
+                <div class="form-group">
+                  <input style="width: 1%" type="number" placeholder="Month">
+                  <input style="width: 1%" type="number" placeholder="Year">
+                  <input style="width: 50px" type="number" placeholder="CCV">
+                </div>
+
+                <button type="button" id="pay-now-button">Pay Now</button>
+              </form>
+
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <a href=""><h4>Why isn't Caterpillar free?</h4></a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
 
     <div class="hero">
 
@@ -198,81 +185,132 @@
         <div class="column" style="color: var(--white)">
           <h1>Writing keeps the mind active</h1>
           <p>Watching movies is inherently passive. No longer. You'll have
-          to listen carefully and write exactly what you hear.</p>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section" id="paleblue-bg">
-      <div class="container">
-        <div class="column">
-          <h1>Record and listen to yourself</h1>
-          <p>It't important to hear yourself. If you want to sound like a native,
-          you've got to have a way to hear what you sound like. Listen back
-        and practive your accent as much as you need</p>
-          </div>
-
-          <div class="column-centered">
-            <img src="img/speak.svg">
+            to listen carefully and write exactly what you hear.</p>
           </div>
         </div>
       </div>
 
 
-    <div class="section" style="background-color: var(--blue)">
-      <div class="container">
-        <div class="column-centered">
-          <img src="img/mountain.svg">
+      <div class="section" id="paleblue-bg">
+        <div class="container">
+          <div class="column">
+            <h1>Record and listen to yourself</h1>
+            <p >It't important to hear yourself. If you want to sound like a native,
+              you've got to have a way to hear what you sound like. Listen back
+              and practive your accent as much as you need</p>
+            </div>
+
+            <div class="column-centered">
+              <img src="img/speak.svg">
+            </div>
+          </div>
         </div>
 
-        <div class="column" style="color: var(--white)">
-          <h1>Reach your daily goal</h1>
-          <p>Consistency is key. Choose a daily goal and Caterpillar will keep you on track.</p>
+
+        <div class="section" style="background-color: var(--blue)">
+          <div class="container">
+            <div class="column-centered">
+              <img src="img/mountain.svg">
+            </div>
+
+            <div class="column" style="color: var(--white)">
+              <h1>Reach your daily goal</h1>
+              <p>Consistency is key. Choose a daily goal and Caterpillar will keep you on track.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
 
-    <div class="section" id="white-bg">
+        <div class="section" id="white-bg">
 
-      <div class="container">
+          <div class="container">
 
-        <div class="column">
-          <h1>Celebrate</h1>
-          <p>It is insanely rewarding to watch an entire foreign movie and
-            understand every word without the need for subtitles.
-            Caterpillar can make this a reality.</p>
+            <div class="column">
+              <h1>Celebrate</h1>
+              <p>It is insanely rewarding to watch an entire foreign movie and
+                understand every word without the need for subtitles.
+                Caterpillar can make this a reality.</p>
+              </div>
+
+              <div class="column-centered">
+                <img src="img/friends.svg">
+              </div>
+
+            </div>
+
+            <div class="cta-section">
+              <a class="button" onclick="openModal()">Download for Mac</a>
+              <a class="button" onclick="openModal()">Download for PC</a>
+            </div>
+
           </div>
 
-          <div class="column-centered">
-            <img src="img/friends.svg">
+
+          <div class="email-section">
+            <h1>Want updates and free language learning hacks?</h1>
+            <div>
+              <input id="txtEmail" placeholder="Enter your email">
+              <button id="submit-email" onclick="checkInput()">Submit</button>
+            </div>
+
           </div>
 
+          <footer class="footer">
+            <div>&copy; True Thing LLC</div>
+          </footer>
+
         </div>
 
-        <div class="cta-section">
-          <a class="button" onclick="openModal()">Download for Mac</a>
-          <a class="button" onclick="openModal()">Download for PC</a>
-        </div>
 
-      </div>
+        <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDF5Vx4s8XZ1FW_Tm50iR0kas40602OcNI",
+          authDomain: "caterpillar-19fbc.firebaseapp.com",
+          databaseURL: "https://caterpillar-19fbc.firebaseio.com",
+          storageBucket: "caterpillar-19fbc.appspot.com",
+          messagingSenderId: "44858417129"
+        };
+        firebase.initializeApp(config);
 
+        // Get elements
+        const txtEmail = document.getElementById('txtEmail');
+        const txtPassword = document.getElementById('txtPassword');
+        const btnSignUp = document.getElementById('btnSignUp');
 
-      <div class="email-section">
-        <h1>Want updates and free language learning hacks?</h1>
-        <div>
-          <input id="modal-email" placeholder="Enter your email">
-          <button id="submit-email" onclick="checkInput()">Submit</button>
-        </div>
+        //add login event
+        btnSignUp.addEventListener('click', e => {
+          //get email and password
+          //TODO: check for real emails
+          const email = txtEmail.value;
+          const pass = txtPassword.value;
+          const auth = firebase.auth();
+          //sign in
+          const promise = auth.createUserWithEmailAndPassword(email, pass);
+          promise.catch(e => document.getElementById('errorMessage').innerHTML = (e.message));
+        });
 
-      </div>
+        //add realtime authentication listener
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+          var user = firebase.auth().currentUser;
+          if (firebaseUser) {
+            console.log(firebaseUser);
+            document.getElementById('modal-1').style.display = "none";
+            document.getElementById('modal-2').style.display = "block";
+            document.getElementById('modal-3').style.display = "none";
+            user.sendEmailVerification().then(function() {
+              document.getElementById('errorMessage').style.color = "var(--green)";
+              document.getElementById('errorMessage').innerHTML = "Email verification sent.";
+            }, function(error) {
+              // An error happened.
+            });
+          }
+          else {
+            console.log("not logged in");
+          }
+        });
 
-      <footer class="footer">
-        <div>&copy; True Thing LLC</div>
-      </footer>
+        </script>
 
-    </div>
-
-  </body>
-  </html>
+      </body>
+      </html>
